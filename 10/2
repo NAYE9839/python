@@ -1,0 +1,47 @@
+#p.317
+t = (10,20,30)
+a = t[0]
+b = t[1:]
+print(a, b, list(b))
+
+t = (10,20,30)
+for i, v in enumerate(t):
+    print(i, v)
+
+
+a = []
+b = [1]
+c = ()
+d = (1,) #(1)이랑 비교해보기, (1)은 int형
+print(type(a), type(b), type(c), type(d))
+
+#p.318
+a, b = [10, 20]
+c, d = (10, 20)
+print(a,b,c,d)
+
+a = (10,20,30)
+b = 10, 20, 30
+print(type(b))
+c, d, e = b
+
+#p.320
+a, b = 10, 20
+b, a = a, b
+
+for a in enumerate([1,2,3]):
+    print(a[0], a[1])
+
+for i, v in enumerate([1,2,3]):
+    print(i, v)
+
+def divide(n1, n2):
+    q = n1 // n2
+    r = n1 % n2
+    return q, r
+
+q, r = divide(10,3)
+print(q,r)
+
+# q, r = divide(10,0) 분모 0, 나누면 프로그램 죽음
+# print(q,r)
