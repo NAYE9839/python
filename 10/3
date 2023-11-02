@@ -24,3 +24,24 @@ a = [1,2,3]
 b = map(test, a)
 c =list(b)
 print(c)
+
+a = [1,2,3]
+b = map(lambda num: num+1, a)
+c =list(b)
+print(c)
+
+def under_3(item):
+    return item < 3
+
+list_data_a = [1,2,3,4,5]
+
+output_data = filter(under_3, list_data_a)
+output_data = [i for i in list_data if i < 3]
+
+output_data = filter(lambda x: x < 3, list_data_a)
+print(output_data, list(output_data))
+
+add = lambda x, y: x + y
+print(add(1,2))
+print(add(2,3))
+print(add(3,4))
