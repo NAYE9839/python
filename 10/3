@@ -1,0 +1,26 @@
+def call_3_times(func):
+    for i in range(3):
+        func(i)
+
+def print_hello(i):
+    print(f"{i+1} 안녕")
+
+def print_bye(i):
+    print(f"{i+1} 꺼져")
+
+call_3_times(print_hello)
+call_3_times(print_bye)
+
+#p.323 map(), filter()
+a = ["1","2","3","4"]
+#a = [int (i) for i in a]
+a = list(map(int, a)) #int는 생성자
+b = sum(a)
+
+def test(num):
+    return num + 1
+
+a = [1,2,3]
+b = map(test, a)
+c =list(b)
+print(c)
