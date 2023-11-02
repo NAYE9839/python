@@ -1,0 +1,59 @@
+#p.284
+
+def info(name,grade):
+    print(f"{name} {grade}")
+
+    info("장은미")
+
+# #p.279 기본값 매개변수
+def reg(name, grade=1):
+    print(f"{name} {grade}")
+
+reg("김인하")
+reg("김인하", 2)
+
+
+# def reg(grade=1, name): 기본값 매개변수 선언은 뒤쪽에서
+#     print(f"{name} {grade}")
+
+# reg("김인하")
+
+
+print("김인하", end="\t")
+print()
+print("1","2","3",sep="/")
+
+# #p.280 키워드 매개변수
+def intro(name, grade=1, hobby="없음"):
+    print(f"이름:{name}")
+    print(f"학년:{grade}")
+    print(f"취미:{hobby}") 
+
+intro(hobby="디아4", grade=2)
+intro("김인하" ,"없다")
+intro("김인하")
+
+#p.278 가변 매개변수 *args(가변인자)
+def intro(name, grade, *hobbies):
+    print(name, grade)
+    if 0 < len(hobbies):
+        print(hobbies)
+    else:
+        print("없다")
+
+intro("김인하", 3, "디아4", "삼국지", "대항해시대", "카트")
+intro("김인하", 3, "디아4")
+intro("김인하", 3)
+
+def intro(name, *hobbies,  grade):
+    print(name, grade)
+    print(hobbies)
+
+#intro("김미영", "이미영", "최미영", "송미영")
+intro("김미영", "이미영", "최미영", grade="송미영")
+
+def intro(name, *hobbies,  grade=1):
+    print(name, grade)
+    print(hobbies)
+
+intro("김미영", "이미영", "최미영", "송미영")
