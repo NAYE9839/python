@@ -14,6 +14,12 @@ file.write("이인하|컴퓨터시스템|2학년\n")
 file.close()
 
 2.py
+import os
+
+targetdir = "c:\\test_cc"
+if not os.path.exists(targetdir): #파일 존재하는지 확인
+    os.mkdir(targetdir) #없는 폴더 생성
+
 file = open("c:\\test_c\\test02.txt","w")
 
 scores = {"math": 90, "kor": 100, "eng": 40}
@@ -24,6 +30,9 @@ for k,v in scores.items():
 file.close()
 
 3.py
+import os
+
+if os.path.exists("c:\\test_c\\test01.txt"):
 file = open("c:\\test_c\\test01.txt","r")
 
 
